@@ -1,17 +1,13 @@
-
-
 function PokemonCard(props) {
-  console.log(props.pokemon);
+  console.log(props.toto);
 
   return (
     <figure>
-        {props.pokemon.imgSrc  ? <img src={props.pokemon.imgSrc}/> : <p>???</p> }
+        {props.toto.imgSrc  ? <img src={props.toto.imgSrc}/> : <p>???</p> }
       <figcaption>
-        {props.pokemon.name ? props.pokemon.name : '???'}</figcaption>
+        {props.toto.name ? props.toto.name : '???'}</figcaption>
     </figure>
   )
 }
-
-
 
 export default PokemonCard;
