@@ -16,7 +16,7 @@ Pokemon.proTypes = {
   props : PropsTypes.shape({
     pokemon: propsType.shape({
   name: PropsTypes.string.isRequired,
-  imgSrc: PropsTypes.string.isRequired,
+  imgSrc: PropsTypes.string,
     }).isRequired
 }).isRequired
 }
