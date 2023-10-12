@@ -1,11 +1,11 @@
 function PokemonCard(props) {
-  console.log(props.toto);
+  console.log(props.pokemonId);
 
   return (
     <figure>
-        {props.toto.imgSrc  ? <img src={props.toto.imgSrc}/> : <p>???</p> }
+        {props.pokemonId.imgSrc  ? <img src={props.pokemonId.imgSrc}/> : <p>???</p> }
       <figcaption>
-        {props.toto.name ? props.toto.name : '???'}</figcaption>
+        {props.pokemonId.name ? props.pokemonId.name : '???'}</figcaption>
     </figure>
   )
 }

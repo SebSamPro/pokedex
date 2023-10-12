@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div>
-      <PokemonCard toto = {pokemonList[0]}/>
+      <PokemonCard pokemonId = {pokemonList[0]}/>
     </div>
   )
 }
