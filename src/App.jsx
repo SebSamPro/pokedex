@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
-import PropTypes from "prop-types";
+import NavBar from './components/NavBar';
 
 function App() {
   const pokemonList = [
@@ -42,10 +40,15 @@ function App() {
   
 
   return (
-    <div> <PokemonCard pokemon = {pokemonList[pokemonIndex]}/>
-    <button disabled={pokemonIndex <= 0} onClick={handlePrevClick}>precedent</button>
-    <button disabled= {pokemonIndex >= pokemonList.length -1} onClick={handleNextClick}>suivant</button>
-
+    <div> 
+      <PokemonCard pokemon = {pokemonList[pokemonIndex]}/>
+      <NavBar
+        nextClick={handleNextClick}
+        prevClick={handlePrevClick}
+        pokemonIndex={pokemonIndex}
+        setpokemonIndex={setpokemonIndex}
+        pokemonList={pokemonList}
+      />
     </div>
   )
   
